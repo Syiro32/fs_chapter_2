@@ -42,7 +42,7 @@
     $price = 2500;
 
     $itemName = "Mouse";
-    $price = 25;
+    $price = 30;
 
     //3. Calculation 
     $totalTax = $price * TAX_RATE;
