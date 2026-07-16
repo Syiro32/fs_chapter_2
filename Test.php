@@ -17,7 +17,7 @@
 
                 <div class="card p-3 my-3 bg-light">
                     <?php
-                    echo "Koperasi PKT<br>";
+                    echo "<h2>Koperasi PKT</h2><br>";
 
                     $name = "Ali";
                     $price = 4.00;
@@ -87,6 +87,8 @@
 
                 <div class="card p-3 my-3  bg-light">
                     <?php
+                    echo "<h3>If elseif Statement</h3>";
+
                     $language = "ru";
                     $name = "Syahrul";
                     $name2 = "Syiro";
@@ -103,8 +105,9 @@
                 </div>
 
                 <div class="card p-3 my-3 bg-light">
-
                     <?php
+                    echo "<h3>If else and Ternary statement</h3><br>";
+
                     echo "Condition: <br>";
                     $citizenship = "Malaysian";
                     $age >= 18;
@@ -127,13 +130,121 @@
                         echo "Eligle to vote.";
                     } else {
                         echo "Not eligible to vote.";
-                    } echo "<br><br>";
+                    }
+                    echo "<br><br>";
 
                     $status = ($citizenship == "Malaysian" && $age >= 18) ? "Eligible to vote." : "Not eligible to vote.";
                     echo "Voting Status: <br>" . $status;
 
                     ?>
                 </div>
+
+                <div class="card p-3 my-3">
+                    <?php
+                    echo "<h3>Switch Statement</h3><br>";
+                    $favcolor = "purple";
+
+                    switch ($favcolor) {
+                        case "red":
+                            echo "Your favourite color is red!";
+                            break; //stop the execution of the code block
+                        case "blue":
+                            echo "Your favourite color is blue!";
+                            break;
+                        case "purple":
+                            echo "Your favourite color is purple!";
+                            break;
+                        default:
+                            echo "Your favourite color is neither red, purple or blue!";
+                    }
+
+                    $item = "Tea";
+
+                    switch ($item) {
+                        case "Coffee":
+                            echo "<br><br>Name of Item is Coffee";
+                            echo "<br>Price of Coffee is RM 1.00";
+                            echo "<br>Final Price is RM " . ($price = 1.00 * 15);
+                            break;
+                        case "Tea":
+                            echo "<br><br>Name of Item is Tea";
+                            echo "<br>Price of Tea is RM 0.80";
+                            echo "<br>Final Price is RM " . ($price = 0.80 * 15);
+                            break;
+                        case "Cappuccino":
+                            echo "<br><br>Name of Item is Cappuccino";
+                            echo "<br>Price of Cappuccino is RM 5.00";
+                            echo "<br>Final Price is RM " . ($price = 5.00 * 15);
+                            break;
+                        case "Orange":
+                            echo "<br><br>Name of Item is Orange";
+                            echo "<br>Price of Orange is RM 2.50";
+                            echo "<br>Final Price is Rm " . ($price = 2.50 * 15);
+                            break;
+                        default:
+                            echo "<br><br>Item not found!";
+                    }
+                    ?>
+                </div>
+
+                <div class="card p-3 my-3">
+                    <?php
+                    echo "<h3>For loop</h3><br>";
+
+                    for ($x = 0; $x <= 15; $x += 2) {
+                        echo "Even number: $x <br>";
+                    }
+
+                    echo "<br><h3>While and Do while loop</h3><br>";
+
+                    $i = 1;
+                    echo "While: <br>";
+                    while ($i < 5) {
+                        echo "The number is: $i <br>";
+                        $i++;
+                    }
+                    echo "<br>";
+                    $b = 1;
+                    echo "Do While: <br>";
+                    do {
+                        echo "The number is: $b <br>";
+                        $b++;
+                    } while ($b <= 5);
+
+                    echo "<br><h3>Foreach loop</h3><br>";
+                    
+                    $students = ["Abu", "Raj", "Nilam"];
+
+                    foreach ($students as $name) {
+                        echo "Student Name: $name <br>"; 
+                    }
+                    ?>
+
+                    <?php
+                    echo "<br>Multiplication Table for 5";
+                    for ($x = 1; $x <= 12; $x++) {
+                        $result = 5 * $x;
+                        echo "<br>$x x 5 = $result";
+                    }
+                    ?>
+                </div>
+
+                <div class="card p-3 my-3">
+                    <?php
+                    echo "<h3>Function</h3><br>";
+
+                    function greetStudent($name) {
+                        echo "Hello $name, Welcome to Full Stack Class!<br><br>";
+                    }
+                    greetStudent("Syahrul");
+
+                    function calculateTotal ($price, $quantity){
+                        $total = $price * $quantity;
+                        return $total;
+                    }
+                    $bill = calculateTotal(10, 5);
+                    echo "Total Bill: " . $bill;
+                    ?>
 
             </div>
         </div>
