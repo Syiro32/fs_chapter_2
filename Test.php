@@ -246,6 +246,16 @@
                     echo "Total Bill: " . $bill;
                     ?>
 
+                    <?php
+
+                    function checkBMI($weight, $height) {
+                        $BMI = $weight / ($height * $height);
+                        return $BMI;
+                    }
+                    $BMI = checkBMI(73,1.8);
+                    echo "<br><br>Your BMI is: " . number_format($BMI, 2);
+                    ?>
+
             </div>
         </div>
     </div>
